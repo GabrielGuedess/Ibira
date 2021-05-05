@@ -39,6 +39,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Be Vietnam', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 2000px;
   }
 `;
 
