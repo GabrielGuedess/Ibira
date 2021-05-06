@@ -41,6 +41,24 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Be Vietnam', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height: 2000px;
   }
+
+  ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to top, #6d0019 0%, #a90329 100%);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+  ::-webkit-scrollbar-track {
+    background: #131313;
+  }
+
+  ::selection {
+    background: red;
+  }
 `;
 
 export default GlobalStyles;
