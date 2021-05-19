@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import media from 'styled-media-query';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -44,12 +45,17 @@ const GlobalStyles = createGlobalStyle`
 
   ::-webkit-scrollbar-thumb {
     background-image: linear-gradient(to top, #6d0019 0%, #a90329 100%);
-    border-radius: 5px;
+    border-radius: 0.5rem;
   }
 
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 0.8rem;
+    height: 0.8rem;
+
+    ${media.lessThan('large')`
+      width: 0.4rem;
+      height: 0.4rem;
+    `}
 }
 
   ::-webkit-scrollbar-track {
@@ -58,6 +64,35 @@ const GlobalStyles = createGlobalStyle`
 
   ::selection {
     background: red;
+  }
+
+  #nprogress {
+    pointer-events: none;
+
+    .bar {
+      background: linear-gradient(to left,#6d0019 0%,#a90329 100%);
+
+      position: fixed;
+      z-index: 1031;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 3px;
+    }
+    .peg {
+      display: block;
+      position: absolute;
+      right: 0px;
+      width: 100px;
+      height: 100%;
+      box-shadow: 0 0 0.5rem #a90329, 0 0 1rem #a90329;
+      opacity: 1.0;
+
+      -webkit-transform: rotate(3deg) translate(0px, -4px);
+          -ms-transform: rotate(3deg) translate(0px, -4px);
+              transform: rotate(3deg) translate(0px, -4px);
+    }
   }
 `;
 

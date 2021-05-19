@@ -1,11 +1,12 @@
 {
-  "name": "React Avançado - Boilerplate",
-  "short_name": "React Avançado",
+  "name": "Ibira - Home",
+  "short_name": "Ibira",
   "icons": [
     {
       "src": "/img/icon-192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "/img/icon-512.png",
@@ -14,8 +15,9 @@
     }
   ],
   "background_color": "#06092B",
-  "description": "Boilerplate utilizando Typescript, React, NextJS e Styled Components!",
+  "description": "Web site",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#06092B"
+  "theme_color": "#06092B",
+  "prefer_related_applications": false
 }

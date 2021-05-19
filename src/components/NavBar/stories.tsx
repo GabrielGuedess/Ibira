@@ -6,8 +6,17 @@ export default {
   component: NavBar,
 } as Meta;
 
-export const Default: Story<MenuProps> = args => <NavBar {...args} />;
+export const Desktop: Story<MenuProps> = args => <NavBar {...args} />;
 
-Default.parameters = {
+Desktop.parameters = {
   layout: 'fullscreen',
+};
+
+export const Mobile: Story<MenuProps> = args => <NavBar {...args} />;
+
+Mobile.parameters = {
+  layout: 'fullscreen',
+  viewport: {
+    defaultViewport: 'mobile1',
+  },
 };

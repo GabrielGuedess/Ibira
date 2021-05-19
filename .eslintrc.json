@@ -50,8 +50,13 @@
       "implicit-arrow-linebreak": "off",
       "import/prefer-default-export": "off",
       "@typescript-eslint/no-non-null-assertion": "off",
+      "object-curly-newline": "off",
       "indent":"off",
       "operator-linebreak": "off",
+      "function-paren-newline":"off",
+      "react/jsx-curly-newline": "off",
+      "react/jsx-indent": "off",
+      "no-nested-ternary": "off",
       "import/extensions": [
         "error",
         "ignorePackages",

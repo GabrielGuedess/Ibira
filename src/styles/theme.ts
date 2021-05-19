@@ -9,10 +9,18 @@ export default {
     transparentBlack: 'rgba(0, 0, 0, 0.788)',
     textNav: 'white',
     bag: 'white',
+    textInputSearch: 'white',
     iconNav: {
       icon: 'white',
       iconHover: 'red',
     },
+    iconModal: {
+      icon: 'black',
+      iconActive: 'rgba(0, 0, 0, 0.1)',
+    },
+  },
+  menuOpen: {
+    colorPrimary: 'white',
   },
   font: {
     fontPrimary:
@@ -30,7 +38,8 @@ export default {
     base: 10,
     menu: 20,
     overlay: 30,
-    modal: 40,
-    alwaysOnTop: 50,
+    closeNavMenu: 40,
+    modal: 50,
+    alwaysOnTop: 60,
   },
-};
+} as const;

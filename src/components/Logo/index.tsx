@@ -1,11 +1,7 @@
 import * as S from './styles';
 
-export type LogoProps = {
-  hideOnMobile?: boolean;
-};
-
-const Logo = ({ hideOnMobile = false }: LogoProps) => (
-  <S.Wrapper hideOnMobile={hideOnMobile}>
+const Logo = () => (
+  <S.Wrapper>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 150.11 57.86"

@@ -3,6 +3,17 @@ import { renderWithTheme } from 'utils/tests/helpers';
 
 import NavBar from '.';
 
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: '',
+      asPath: '',
+    };
+  },
+}));
+
 describe('<NavBar />', () => {
   it('should render the Menu', () => {
     renderWithTheme(<NavBar />);
@@ -22,7 +33,7 @@ describe('<NavBar />', () => {
     });
 
     fireEvent.scroll(window, {
-      target: { scrollY: 0 },
+      target: { scrollY: 400 },
     });
 
     expect(screen.getByLabelText(/Container Menu/i)).toHaveStyle({

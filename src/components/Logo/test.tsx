@@ -10,16 +10,4 @@ describe('<Logo />', () => {
 
     expect(screen.getByLabelText(/Ibira/i)).toBeInTheDocument();
   });
-
-  it('should render the logo in mobile', () => {
-    renderWithTheme(<Logo hideOnMobile />);
-
-    expect(screen.getByLabelText(/Ibira/i).parentElement).toHaveStyleRule(
-      'width',
-      '5.8rem',
-      {
-        media: '(max-width: 768px)',
-      },
-    );
-  });
 });
