@@ -26,6 +26,10 @@ export const HeadingCategoryBox = styled.div`
     height: 6.5rem;
     padding: 0;
   `}
+
+  @media (max-height: 600px) {
+    height: 5rem;
+  }
 `;
 
 export const HeadingCategory = styled.h1`
@@ -51,7 +55,6 @@ export const HeadingCategory = styled.h1`
         transform: translateY(2.9rem);
         transition: 0.4s;
       }
-
     `}
 
     &:hover {
@@ -77,6 +80,10 @@ export const HeadingCategory = styled.h1`
       letter-spacing: 0.4rem;
       font-weight: 400;
     `}
+
+    @media (max-height: 550px) {
+      font-size: 1.6rem;
+    }
   `}
 `;
 
@@ -124,15 +131,4 @@ export const Arrow = styled(ArrowBack)`
     height: 4rem;
     color: ${theme.colors.primary};
   `}
-`;
-
-export const WrapperComponentsMenu = styled.div`
-  position: absolute;
-  bottom: 4rem;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: max-content;
-  padding: 0 5rem;
-  background-color: aliceblue;
 `;

@@ -15,6 +15,10 @@ const mobileAndDesktop = {
     position: absolute;
     bottom: 5rem;
     right: 5rem;
+    @media (max-height: 550px) {
+      bottom: 2.5rem;
+      right: 3rem;
+    }
   `,
 };
 export const Wrapper = styled.div<SearchProps & MobileSearchProps>`

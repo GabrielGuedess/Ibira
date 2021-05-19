@@ -37,6 +37,10 @@ const mobileAndDesktop = {
     position: absolute;
     bottom: 5rem;
     left: 5rem;
+    @media (max-height: 550px) {
+      bottom: 2.5rem;
+      left: 3rem;
+    }
   `,
 };
 
