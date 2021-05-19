@@ -1,10 +1,5 @@
-const AboutPage = () => <p>This is about Next.js!</p>;
+import NavBar from 'components/NavBar';
 
-export async function getServerSideProps() {
-  await new Promise(resolve => {
-    setTimeout(resolve, 1000);
-  });
-  return { props: {} };
-}
+const TestUrl = () => <NavBar dinamic />;
 
-export default AboutPage;
+export default TestUrl;
