@@ -14,20 +14,20 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <Head>
-        <title>Boilerplate</title>
-        <link rel="shortcut icon" href="/img/icon-512.png" />
-        <link rel="apple-touch-icon" href="/img/icon-512.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#06092B" />
-        <meta name="description" content="Ibira Web Site" />
-      </Head>
-      <GlobalStyles />
-      <ContextProviders>
+    <ContextProviders>
+      <ThemeProvider theme={theme}>
+        <Head>
+          <title>Boilerplate</title>
+          <link rel="shortcut icon" href="/img/icon-512.png" />
+          <link rel="apple-touch-icon" href="/img/icon-512.png" />
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#06092B" />
+          <meta name="description" content="Ibira Web Site" />
+        </Head>
+        <GlobalStyles />
         <Component {...pageProps} />
-      </ContextProviders>
-    </ThemeProvider>
+      </ThemeProvider>
+    </ContextProviders>
   );
 }
 
