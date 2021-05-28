@@ -6,6 +6,7 @@ import NProgress from 'nprogress';
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 import { Router } from 'next/router';
+import ContextProviders from '../contexts/contextUtils/providers';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -23,7 +24,9 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="description" content="Ibira Web Site" />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <ContextProviders>
+        <Component {...pageProps} />
+      </ContextProviders>
     </ThemeProvider>
   );
 }
