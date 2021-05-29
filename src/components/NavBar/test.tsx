@@ -53,7 +53,7 @@ describe('<NavBar />', () => {
     });
 
     expect(screen.getByLabelText(/Container Menu/i)).toHaveStyle({
-      background: 'black',
+      background: 'rgb(0, 0, 0)',
     });
   });
 
@@ -61,7 +61,7 @@ describe('<NavBar />', () => {
     renderWithTheme(<NavBar />);
 
     expect(screen.getByLabelText(/Container Menu/i)).toHaveStyle({
-      background: 'black',
+      background: 'rgb(0, 0, 0)',
     });
   });
 });

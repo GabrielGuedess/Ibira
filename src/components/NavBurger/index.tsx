@@ -4,6 +4,7 @@ import * as S from './styles';
 
 const NavBurger = () => {
   const [isOpenMenuNav, setIsOpenMenuNav] = useState(false);
+
   return (
     <>
       <S.Wrapper

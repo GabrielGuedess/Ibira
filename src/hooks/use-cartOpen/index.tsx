@@ -1,42 +1,37 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-import {
-  createContext,
-  Dispatch,
-  SetStateAction,
-  useContext,
-  useState,
-} from 'react';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { createContext, useState } from 'react';
 
-export type CartOpenProps = {
-  children?: React.ReactNode;
+export type Produtos = {
+  id: number;
+  nome: string;
+  preco: number;
+  marca: string;
+  categoria: string;
 };
 
-type CartValuesProps = { isOpen: boolean; setIsOpen: boolean };
-
-type AppContextValue = {
-  state: CartValuesProps;
-  setState: Dispatch<SetStateAction<CartValuesProps>>;
+export type ProdutosProps = {
+  produtos: Produtos[];
 };
 
-const cartOpenDefaultValue: AppContextValue = {
-  state: { isOpen: false, setIsOpen: false },
-  setState: () => {},
+type ProdutoContextProps = {
+  produtoList: Produtos[];
+  setProdutoList: any;
 };
 
-export const CartOpen = createContext(cartOpenDefaultValue);
+export type ProdutoProps = {
+  children: React.ReactNode;
+};
+export const ProdutoContext = createContext({} as ProdutoContextProps);
 
-export const AppProvider = ({ children }: CartOpenProps) => {
-  const [state, setState] = useState(cartOpenDefaultValue.state);
-
+export const ProdutoContextProvider = ({ children }: ProdutoProps) => {
+  const [produtoList, setProdutoList] = useState([]);
   return (
-    <CartOpen.Provider value={{ state, setState }}>
+    <ProdutoContext.Provider value={{ produtoList, setProdutoList }}>
       {children}
-    </CartOpen.Provider>
+    </ProdutoContext.Provider>
   );
 };
 
-export function useCartOpen() {
-  const context = useContext(CartOpen);
-  const { state, setState }: AppContextValue = context;
-  return { state, setState };
-}
+export const Providers = ({ children }: ProdutoProps) => (
+  <ProdutoContextProvider>{children}</ProdutoContextProvider>
+);

@@ -49,13 +49,16 @@ export const Wrapper = styled.div<OpenUserProps>`
 export const UserLogin = styled.div<OpenUserProps>`
   ${({ theme, isOpenUser }) => css`
     position: fixed;
+    display: flex;
+    flex-direction: column;
     opacity: ${isOpenUser ? 1 : 0};
     pointer-events: ${isOpenUser ? 'all' : 'none'};
     right: ${isOpenUser ? 0 : '-25%'};
     top: 0;
     bottom: 0;
     width: 25%;
-    background: #121212;
+    background: ${theme.userOpen.colorPrimary};
+    border-radius: 0.5rem 0 0 0.5rem;
     transition: 0.6s ease-in-out;
     z-index: ${theme.layers.modal};
 
@@ -69,17 +72,8 @@ export const UserLogin = styled.div<OpenUserProps>`
       bottom: 0;
       left: ${isOpenUser ? 0 : '-100%'};
       width: 100%;
+      border-radius: 0;
     `}
-  `}
-`;
-
-export const ModalUserClick = styled.div<OpenUserProps>`
-  ${({ isOpenUser }) => css`
-    position: ${isOpenUser ? 'fixed' : 'none'};
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
   `}
 `;
 
@@ -126,5 +120,28 @@ export const CloseX = styled.div<OpenUserProps>`
       top: 3.5rem;
       left: 1.5rem;
     `}
+  `}
+`;
+
+export const TitleLogin = styled.h1`
+  ${({ theme }) => css`
+    width: 100%;
+    font-family: ${theme.font.fontNav};
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: ${theme.userOpen.fontColor};
+    text-align: center;
+    margin-top: 0.8rem;
+  `}
+`;
+
+export const ModalUserClick = styled.div<OpenUserProps>`
+  ${({ isOpenUser }) => css`
+    position: ${isOpenUser ? 'fixed' : 'none'};
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
   `}
 `;

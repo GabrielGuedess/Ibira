@@ -1,26 +1,34 @@
 export default {
   colors: {
-    primary: 'red',
-    black: 'black',
+    primary: '#FF0000',
+    white: '#fff',
+    black: '#000',
+    sucess: '#69dd95',
+    error: '#ff0033',
+    gardientButton: 'linear-gradient(to top,  #A90329,  rgb(32, 1, 1));',
   },
   colorsNav: {
     transparent: 'transparent',
-    black: 'black',
+    black: '#000',
     transparentBlack: 'rgba(0, 0, 0, 0.788)',
-    textNav: 'white',
-    bag: 'white',
-    textInputSearch: 'white',
+    textNav: '#fff',
+    bag: '#fff',
+    textInputSearch: '#fff',
     iconNav: {
-      icon: 'white',
-      iconHover: 'red',
+      icon: '#fff',
+      iconHover: '#FF0000',
     },
     iconModal: {
-      icon: 'black',
+      icon: '#000',
       iconActive: 'rgba(0, 0, 0, 0.1)',
     },
   },
   menuOpen: {
-    colorPrimary: 'white',
+    colorPrimary: '#fff',
+  },
+  userOpen: {
+    colorPrimary: '#fff',
+    fontColor: '#000',
   },
   font: {
     fontPrimary:

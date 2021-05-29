@@ -155,8 +155,7 @@ export const ContainerInputModal = styled.div`
 export const InputModal = styled.input`
   ${({ theme }) => css`
     position: relative;
-    border-radius: 5rem;
-    width: 20rem;
+    width: auto;
     height: 5rem;
     display: flex;
     align-items: center;
@@ -167,6 +166,6 @@ export const InputModal = styled.input`
     font-family: ${theme.font.fontNav};
     outline: none;
     color: ${theme.colorsNav.textInputSearch};
-    font-size: 2rem;
+    font-size: 1.7rem;
   `}
 `;

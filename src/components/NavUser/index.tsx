@@ -1,3 +1,6 @@
+import Button from 'components/Button';
+import Input from 'components/Input';
+import LogoSecondary from 'components/LogoSecondary';
 import { useState } from 'react';
 import * as S from './styles';
 
@@ -17,6 +20,17 @@ const NavUser = () => {
       </S.Wrapper>
       <S.UserLogin isOpenUser={isOpenUser}>
         <S.CloseX onClick={() => setIsOpenUser(!isOpenUser)} />
+        <LogoSecondary />
+        <S.TitleLogin>login</S.TitleLogin>
+        <Input
+          name="E-Mail"
+          type="email"
+          isRequired
+          placeholder="gabrielrguedess@gmail.com"
+          autoValidate
+        />
+        <Input name="Senha" type="password" isRequired hideAndShow />
+        <Button name="Enviar" type="submit" />
       </S.UserLogin>
       <S.ModalUserClick
         aria-label="Modal LoginUser"
