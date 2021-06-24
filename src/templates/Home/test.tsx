@@ -1,4 +1,5 @@
 import { renderWithTheme } from 'utils/tests/helpers';
+import ContextProviders from '../../hooks/provider';
 
 import Home from '.';
 
@@ -15,6 +16,10 @@ jest.mock('next/router', () => ({
 
 describe('<Home />', () => {
   it('should render the heading', () => {
-    renderWithTheme(<Home />);
+    renderWithTheme(
+      <ContextProviders>
+        <Home />
+      </ContextProviders>,
+    );
   });
 });

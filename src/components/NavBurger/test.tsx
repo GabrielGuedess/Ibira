@@ -1,5 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { renderWithTheme } from 'utils/tests/helpers';
+import ContextProviders from '../../hooks/provider';
 
 import NavBurger from '.';
 
@@ -16,7 +17,11 @@ jest.mock('next/router', () => ({
 
 describe('<NavBurger />', () => {
   it('should render the heading', () => {
-    renderWithTheme(<NavBurger />);
+    renderWithTheme(
+      <ContextProviders>
+        <NavBurger />
+      </ContextProviders>,
+    );
 
     fireEvent.click(screen.getByLabelText(/BurgerIcon/i));
     expect(screen.getByLabelText(/BurgerIcon/i)).toBeInTheDocument();

@@ -2,15 +2,19 @@ import { GetStaticProps } from 'next';
 
 import Home from 'templates/Home';
 
-import { useContext } from 'react';
-import { ProdutoContext } from '../contexts/ProdutoContext';
+import { useContext, useEffect } from 'react';
+import { ProdutoContext } from '../hooks/useProdutos';
 import { api } from '../services/api';
 
 import type { ProdutosProps } from '../types/produtos';
 
 export default function Index({ produtos }: ProdutosProps) {
   const { setProdutoList } = useContext(ProdutoContext);
-  setProdutoList(produtos);
+
+  useEffect(() => {
+    setProdutoList(produtos);
+  });
+
   return <Home />;
 }
 export const getStaticProps: GetStaticProps = async () => {

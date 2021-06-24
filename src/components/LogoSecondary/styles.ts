@@ -5,7 +5,6 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 7rem;
 `;
 
 export const WrapperSvg = styled.div`

@@ -2,11 +2,11 @@ import { useState } from 'react';
 import * as S from './styles';
 
 export type ButtonProps = {
-  name: string;
-  type?: 'button' | 'submit' | 'reset' | undefined;
+  name?: string;
+  type?: 'button' | 'submit' | 'reset';
 };
 
-const Button = ({ name, type }: ButtonProps) => {
+const Button = ({ name = 'Enviar', type }: ButtonProps) => {
   const [isAnimation, setIsAnimation] = useState(false);
   return (
     <S.Wrapper

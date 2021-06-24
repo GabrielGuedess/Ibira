@@ -1,5 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { renderWithTheme } from 'utils/tests/helpers';
+import ContextProviders from '../../hooks/provider';
 
 import NavUser from '.';
 
@@ -16,12 +17,20 @@ jest.mock('next/router', () => ({
 
 describe('<NavUser />', () => {
   it('should render the NavUser', () => {
-    renderWithTheme(<NavUser />);
+    renderWithTheme(
+      <ContextProviders>
+        <NavUser />
+      </ContextProviders>,
+    );
     expect(screen.getByLabelText(/UserIcon/i)).toBeInTheDocument();
   });
 
   it('should render the Modal Login/User', () => {
-    renderWithTheme(<NavUser />);
+    renderWithTheme(
+      <ContextProviders>
+        <NavUser />
+      </ContextProviders>,
+    );
     expect(
       screen.getByLabelText(/Modal LoginUser/i).getAttribute('aria-hidden'),
     ).toBe('true');

@@ -6,7 +6,7 @@ import NProgress from 'nprogress';
 import GlobalStyles from 'styles/global';
 import theme from 'styles/theme';
 import { Router } from 'next/router';
-import ContextProviders from '../contexts/contextUtils/providers';
+import ContextProviders from '../hooks/provider';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());

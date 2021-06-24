@@ -86,7 +86,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 `;
 
 export const Input = styled.input<ValueProps>`

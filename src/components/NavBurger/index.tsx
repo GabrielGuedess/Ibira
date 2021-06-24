@@ -1,21 +1,22 @@
 import MenuModal from 'components/MenuModal';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { MenuContext } from '../../hooks/useMenu';
 import * as S from './styles';
 
 const NavBurger = () => {
-  const [isOpenMenuNav, setIsOpenMenuNav] = useState(false);
+  const { openState, setOpenState } = useContext(MenuContext);
 
   return (
     <>
       <S.Wrapper
         aria-label="BurgerIcon"
-        onClick={() => setIsOpenMenuNav(!isOpenMenuNav)}
-        isOpenMenuNav={isOpenMenuNav}
+        onClick={() => setOpenState(!openState)}
+        isOpenMenuNav={openState}
       >
-        <S.HamburgerMenu isOpenMenuNav={isOpenMenuNav} />
+        <S.HamburgerMenu isOpenMenuNav={openState} />
       </S.Wrapper>
 
-      <MenuModal isOpenMenuNav={isOpenMenuNav} />
+      <MenuModal isOpenMenuNav={openState} />
     </>
   );
 };
